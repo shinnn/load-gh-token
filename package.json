@@ -1,0 +1,44 @@
+{
+	"name": "load-gh-token",
+	"version": "1.0.0",
+	"description": "Get a GitHub access token from either an environment variable or a file",
+	"repository": "shinnn/load-gh-token",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"license": "ISC",
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "nyc node test/test.js"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"github",
+		"token",
+		"secret",
+		"env",
+		"environment",
+		"setting",
+		"variable",
+		"async"
+	],
+	"dependencies": {
+		"inspect-with-kind": "^1.0.5",
+		"is-plain-obj": "^1.1.0",
+		"read-utf8-file": "^2.0.0"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config": "^6.7.0",
+		"eslint": "^5.5.0",
+		"nyc": "^13.0.1",
+		"nyc-config-common": "^1.0.0",
+		"tape": "^4.9.1",
+		"unglobbable": "^1.0.1"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	},
+	"nyc": {
+		"extends": "nyc-config-common"
+	}
+}
