@@ -1,10 +1,10 @@
 # load-gh-token
 
 [![npm version](https://img.shields.io/npm/v/load-gh-token.svg)](https://www.npmjs.com/package/load-gh-token)
-[![Build Status](https://travis-ci.org/shinnn/load-gh-token.svg?branch=master)](https://travis-ci.org/shinnn/load-gh-token)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/load-gh-token.svg)](https://coveralls.io/github/shinnn/load-gh-token?branch=master)
+[![Build Status](https://travis-ci.com/shinnn/load-gh-token.svg?branch=master)](https://travis-ci.com/shinnn/load-gh-token)
+[![codecov](https://codecov.io/gh/shinnn/load-gh-token/branch/master/graph/badge.svg)](https://codecov.io/gh/shinnn/load-gh-token)
 
-Get a [GitHub access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) from either an environment variable or a file
+Get a [GitHub access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) from either an environment variable or a file
 
 ```javascript
 const loadGhToken = require('load-gh-token');
@@ -18,7 +18,7 @@ const loadGhToken = require('load-gh-token');
 
 ## Installation
 
-[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install load-gh-token
@@ -37,10 +37,10 @@ Return: `Promise<string>`
 
 If there is an environment variable `GITHUB_TOKEN`, it reads its value.
 
-If the variable `GITHUB_TOKEN` is not defined, then it reads a file `./github-token.txt`.
+If the variable `GITHUB_TOKEN` is not defined, then it reads a file `github-token.txt` at the current working directory.
 
 ```javascript
-// When `process.env.GITHUB_TOKEN` is undefined but a file github-token.txt exists
+// When `process.env.GITHUB_TOKEN` is undefined but a file ./github-token.txt exists
 
 (async () => {
   const token = await loadGhToken();
@@ -48,7 +48,7 @@ If the variable `GITHUB_TOKEN` is not defined, then it reads a file `./github-to
 })();
 ```
 
-If both the `GITHUB_TOKEN` environment variable and the file `./github-token.txt` don't exist, it will be rejected.
+If both the `GITHUB_TOKEN` environment variable and the file `./github-token.txt` don't exist, the `Promise` will be rejected.
 
 ```javascript
 (async () => {
@@ -66,4 +66,4 @@ If both the `GITHUB_TOKEN` environment variable and the file `./github-token.txt
 
 ## License
 
-[ISC License](./LICENSE) © 2018 Shinnosuke Watanabe
+[ISC License](./LICENSE) © 2018 - 2019 Watanabe Shinnosuke
