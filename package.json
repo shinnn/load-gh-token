@@ -1,6 +1,6 @@
 {
 	"name": "load-gh-token",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Get a GitHub access token from either an environment variable or a file",
 	"author": "Watanabe Shinnosuke (https://github.com/shinnn)",
 	"repository": "shinnn/load-gh-token",
